@@ -1,0 +1,70 @@
+@CHARSET "UTF-8";
+
+body
+{
+	background: #fefefe !important;
+}
+
+ul.title-area li.name
+{
+	background: #368A55 !important;
+}
+
+a, a:hover, a:focus
+{
+	color: #368A55;
+}
+
+.breadcrumbs > * a
+{
+	color: #368A55;
+}
+
+#login {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    /*
+    *  Where the magic happens
+    *  Centering method from CSS Tricks
+    *  http://css-tricks.com/centering-percentage-widthheight-elements/
+    */
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.main.container {
+	min-height: 100%;
+	background-color: #fff;
+}
+
+.list.files {
+	font-size: 14px;
+}
+
+.list.files div.tab-40 {
+	padding-left: 40px;
+}
+
+.list.files > div > input {
+	margin: 0.1em;
+}
+
+.text-small {
+	font-size: 12px;
+}
+
+.row-1 {
+	background-color: #e9e9e9;
+}
+
+.row-2 {
+	background-color: #F5F5F5;
+}
+
+input.dijitOffScreen {
+	display: none;
+}

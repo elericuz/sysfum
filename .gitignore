@@ -1,0 +1,5 @@
+vendor/
+composer.lock
+public/vendor/dojo/
+public/vendor/ckeditor/
+data/DoctrineORMModule/Proxy/

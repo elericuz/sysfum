@@ -1,0 +1,36 @@
+<nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+        <li class="name">
+            <h1><a href="<?php echo WEBSITE_URL; ?>"><?php echo WEBSITE_NAME?></a></h1>
+        </li>
+        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon">
+            <a href="#"><span>Menu</span></a>
+        </li>
+    </ul>
+    <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+            <li class="divider"></li>
+            <li class="has-dropdown">
+                <a href="#">Hola <?php echo $this->layout()->_userName; ?></a>
+                <ul class="dropdown">
+                    <li>
+                        <a href="<?php echo $this->url('logout'); ?>">Salir</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="<?php echo DEVELOPER_URL; ?>"><?php echo DEVELOPER_NAME; ?></a>
+            </li>
+        </ul>
+        <!-- Left Nav Section -->
+        <ul class="left">
+            <li class="divider"></li>
+            <li>
+                <a href="<?php echo $this->url('dashboard'); ?>">Inicio</a>
+            </li>
+            <li class="divider"></li>
+        </ul>
+    </section>
+</nav>

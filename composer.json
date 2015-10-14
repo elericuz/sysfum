@@ -1,0 +1,40 @@
+{
+    "name": "Sysbus - Clearing Service Co",
+    "description": "Clearing Service Co",
+    "license": "MIT",
+    "keywords": [
+        "framework",
+        "zf2",
+        "foundation",
+        "scss",
+        "dojo",
+        "composer",
+        "activerecord"
+    ],
+    "homepage": "http://cms.fortalecer.org",
+    "authors": [
+    	{
+    		"name": "Eric Valera Miller",
+    		"email": "eric@elericuz.com"
+    	}
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.3.*",
+        "components/foundation": "5.5.1",
+        "doctrine/doctrine-orm-module": "0.7.*"
+    },
+    "scripts": {
+            "pre-autoload-dump" : [
+                "rm -rf public/vendor",
+                "mkdir -p public/vendor/foundation",
+                "mkdir -p public/vendor/dojo"
+            ],
+            "post-autoload-dump" : [
+                "cp -R vendor/components/foundation public/vendor/foundation",
+                "cp -R vendor/components/jquery public/vendor/foundation",
+                "cp -R vendor/components/modernizr public/vendor/foundation",
+                "cp -R vendor/components/normalize.css public/vendor/foundation"
+            ]
+    }
+}

@@ -1,0 +1,41 @@
+<?php echo $this->doctype(); ?>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle(WEBSITE_TITLE); ?>
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+        <!-- Le styles -->
+        <?php
+        echo $this->headLink(array(
+                'rel' => 'shortcut icon',
+                'type' => 'image/vnd.microsoft.icon',
+                'href' => $this->basePath() . '/img/favicon.ico'))
+                  ->prependStylesheet($this->basePath('vendor/foundation/foundation/css/foundation.css'))
+                  ->appendStylesheet($this->basePath('css/app.css'));
+        ?>
+        <!-- Scripts -->
+        <?php
+        $this->headScript()->setAllowArbitraryAttributes(true)
+             ->prependFile($this->basePath('vendor/foundation/foundation/js/vendor/modernizr.js'))
+             ->appendFile($this->basePath('vendor/foundation/foundation/js/vendor/jquery.js'))
+             ->appendFile($this->basePath('vendor/foundation/foundation/js/foundation.min.js'))
+             ->prependFile($this->basepath('vendor/dojo/dojo/dojo.js'), 'text/javascript', array('data-dojo-config'=>'isDebug: true, async: true, parseOnLoad: true'));
+        ?>
+    </head>
+    <body>
+        <div class="fixed">
+            <?php echo $this->partial('partial/topbar'); ?>
+        </div>
+        <div class="row main container">
+            <?php echo $this->content; ?>
+        </div>
+        <?php echo $this->headscript(); ?>
+        <?php echo $this->inlineScript() ?>
+        <script>
+        $(document).foundation();
+        </script>
+    </body>
+</html>

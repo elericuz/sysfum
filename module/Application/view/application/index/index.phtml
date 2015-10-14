@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="small-12 medium-3 columns" id="login" style="border: 1px solid #000">
+        <div class="row text-center">
+            <h1><?php echo WEBSITE_NAME; ?></h1>
+        </div>
+        <form action="<?php echo $this->url('login'); ?>" method="post">
+            <div class="row collapse">
+                <div class="row">
+                    <div class="small-12 medium-12 columns">
+                        <input type="text" name="user-email" placeholder="Email" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 medium-12 columns">
+                        <input type="password" name="user-password" placeholder="Password" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-6 medium-6 small-centered medium-uncentered columns">
+                        <button class="button success radius tiny expand">Entrar</button>
+                    </div>
+                    <div class="small-6 medium-6 small-centered medium-uncentered columns inline">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
