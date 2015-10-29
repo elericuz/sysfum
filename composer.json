@@ -22,7 +22,8 @@
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.3.*",
         "components/foundation": "5.5.1",
-        "doctrine/doctrine-orm-module": "0.7.*"
+        "doctrine/doctrine-orm-module": "0.7.*",
+	"zendframework/zftool": "dev-master"
     },
     "scripts": {
             "pre-autoload-dump" : [

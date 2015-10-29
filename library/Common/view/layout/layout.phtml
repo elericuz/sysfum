@@ -13,29 +13,179 @@
                 'rel' => 'shortcut icon',
                 'type' => 'image/vnd.microsoft.icon',
                 'href' => $this->basePath() . '/img/favicon.ico'))
+                  ->appendStylesheet($this->basePath('css/app.css'))
+                  ->appendStylesheet($this->basePath('vendor/dojo/dijit/themes/claro/claro.css'))
                   ->prependStylesheet($this->basePath('vendor/foundation/foundation/css/foundation.css'))
-                  ->appendStylesheet($this->basePath('css/app.css'));
+                  ->prependStylesheet($this->basePath('vendor/foundation/foundation/css/foundation-icons.css'));
         ?>
         <!-- Scripts -->
         <?php
         $this->headScript()->setAllowArbitraryAttributes(true)
-             ->prependFile($this->basePath('vendor/foundation/foundation/js/vendor/modernizr.js'))
-             ->appendFile($this->basePath('vendor/foundation/foundation/js/vendor/jquery.js'))
-             ->appendFile($this->basePath('vendor/foundation/foundation/js/foundation.min.js'))
-             ->prependFile($this->basepath('vendor/dojo/dojo/dojo.js'), 'text/javascript', array('data-dojo-config'=>'isDebug: true, async: true, parseOnLoad: true'));
+             ->prependFile($this->basepath('vendor/dojo/dojo/dojo.js'), 'text/javascript',
+                 array('data-dojo-config'=>'isDebug: true, async: true, parseOnLoad: true'));
         ?>
-    </head>
-    <body>
-        <div class="fixed">
-            <?php echo $this->partial('partial/topbar'); ?>
-        </div>
-        <div class="row main container">
-            <?php echo $this->content; ?>
-        </div>
         <?php echo $this->headscript(); ?>
-        <?php echo $this->inlineScript() ?>
-        <script>
-        $(document).foundation();
-        </script>
+    </head>
+    <body class="claro">
+        <div data-dojo-type="dijit/layout/BorderContainer"
+             data-dojo-props="design:'sidebar', gutters:true" id="borderContainer">
+            <div data-dojo-type="dijit/layout/ContentPane"
+                 data-dojo-props="region:'center'"
+                 data-dojo-id="centerContentId">
+                <div data-dojo-type="dijit/layout/BorderContainer"
+                     data-dojo-props="design:'sidebar', gutters:true" id="borderInnerContainer"
+                     style="height: 100%">
+                    <div data-dojo-type="dijit/layout/ContentPane"
+                         data-dojo-props="region:'top'"
+                         data-dojo-id="topContentId">
+                        <div class="small-12 columns text-right">
+                            <a href="<?php echo $this->url('logout'); ?>"><span class="fi-power size-14"> Salir</span></a>
+                        </div>
+                    </div>
+                    <div data-dojo-type="dijit/layout/ContentPane"
+                         data-dojo-props="region:'leading'"
+                         style="width: 300px;">
+                         <div data-dojo-id="logoAppDiv" data-dojo-type="dijit/layout/ContentPane">
+                            <img src="<?php echo $this->basePath('img/logo_rags.jpg'); ?>">
+                        </div>
+                        <div data-dojo-type="dijit/layout/AccordionContainer" style="height: 90%;">
+                            <div data-dojo-type="dijit/layout/ContentPane" title="Entidades">
+                                <ul class="circle">
+                                    <li><a href="#"
+                                           onClick="changeScreenTo('<?php echo $this->url('afp-index'); ?>');
+                                                    return false;">AFPs</a></li>
+                                    <li><a href="#"
+                                           onClick="changeScreenTo('<?php echo $this->url('almacen-index'); ?>');
+                                                    return false;">Almacenes de Artículos</a></li>
+                                    <li><a href="#"
+                                           onClick="changeScreenTo('<?php echo $this->url('area-index'); ?>');
+                                                    return false;">Areas de Ordenes de Trabajo</a></li>
+                                    <li><a href="#"
+                                           onClick="changeScreenTo('<?php echo $this->url('articulo-index'); ?>');
+                                                    return false;">Artículos de Sistema</a></li>
+                                    <li><a href="#">Bancos Comerciales</a></li>
+                                    <li><a href="#">Cargos de Personal</a></li>
+                                    <li><a href="#">Clientes</a></li>
+                                    <li><a href="#">Conceptos de EE.GG.PP</a></li>
+                                    <li><a href="#">Documentos que considera el sistema</a></li>
+                                    <li><a href="#">Gastos de la empresa</a></li>
+                                    <li><a href="#">Giros Comerciales</a></li>
+                                    <li><a href="#">Grupos empresariales</a></li>
+                                    <li><a href="#">Líneas de Artículos</a></li>
+                                    <li><a href="#">Periodo de certificados</a></li>
+                                    <li><a href="#">Personal y Plantilla</a></li>
+                                    <li><a href="#">Problemas y Ocurrencia de Ordenes</a></li>
+                                    <li><a href="#">Proveedores</a></li>
+                                    <li><a href="#">Puntaje de Calificación</a></li>
+                                    <li><a href="#">Servicios que brinda la empresa</a></li>
+                                    <li><a href="#">Tipos de Cambio</a></li>
+                                    <li><a href="#">Unidades de Medida</a></li>
+                                    <li><a href="#">Zona de Clientes</a></li>
+                                </ul>
+                            </div>
+                            <div data-dojo-type="dijit/layout/ContentPane" title="Operaciones">
+                                <ul class="circle">
+                                    <li><a href="#">Cadena de Reportes</a></li>
+                                    <li><a href="#">Certificados Históricos</a></li>
+                                    <li><a href="#">Certificados a Clientes</a></li>
+                                    <li><a href="#">Checklist de quejas</a></li>
+                                    <li><a href="#">Clientes</a></li>
+                                    <li><a href="#">Constancias</a></li>
+                                    <li><a href="#">Coordinaciones</a></li>
+                                    <li><a href="#">Cotizaciones</a></li>
+                                    <li><a href="#">Cumpleaños de clientes</a></li>
+                                    <li><a href="#">Encuesta de Satisfacción al Cliente</a></li>
+                                    <li><a href="#">Encuestas de Evaluación</a></li>
+                                    <li><a href="#">Evaluación del personal técnico 1</a></li>
+                                    <li><a href="#">Evaluación del personal técnico 2</a></li>
+                                    <li><a href="#">Evaluación del personal técnico acompañante</a></li>
+                                    <li><a href="#">Felicitaciones clientes</a></li>
+                                    <li><a href="#">Formato de órdenes históricos</a></li>
+                                    <li><a href="#">Informes técnicos</a></li>
+                                    <li><a href="#">Inspecciones</a></li>
+                                    <li><a href="#">Inspecciones proyectadas</a></li>
+                                    <li><a href="#">Ordenes históricas</a></li>
+                                    <li><a href="#">Ordenes de trabajo</a></li>
+                                    <li><a href="#">Pedidos de Insumos a Gerencia</a></li>
+                                    <li><a href="#">Quejas y solicitudes a Clientes</a></li>
+                                    <li><a href="#">Registro de tareas para el equipo (cliente)</a></li>
+                                </ul>
+                            </div>
+                            <div data-dojo-type="dijit/layout/ContentPane" title="Compras y Egresos">
+                                <ul class="circle">
+                                    <li><a href="#">Caja - Egreso</a></li>
+                                    <li><a href="#">Compras detalladas de insumos</a></li>
+                                    <li><a href="#">Compras históricas</a></li>
+                                    <li><a href="#">Cuentas por pagar</a></li>
+                                    <li><a href="#">Kardex de insumos</a></li>
+                                    <li><a href="#">Registro de compras</a></li>
+                                </ul>
+                            </div>
+                            <div data-dojo-type="dijit/layout/ContentPane" title="Ventas">
+                                <ul class="circle">
+                                    <li><a href="#">Clientes</a></li>
+                                    <li><a href="#">Cuentas por cobrar</a></li>
+                                    <li><a href="#">Ingresos de la empresa</a></li>
+                                    <li><a href="#">Ventas año actual</a></li>
+                                    <li><a href="#">Ventas históricas: 2004 -> 2001</a></li>
+                                </ul>
+                            </div>
+                            <div data-dojo-type="dijit/layout/ContentPane" title="Inventarios">
+                                <ul class="circle">
+                                    <li><a href="#">Artículos y productos</a></li>
+                                    <li><a href="#">Compras detalladas de insumos</a></li>
+                                    <li><a href="#">Guías de almacén</a></li>
+                                    <li><a href="#">Inventario inicial</a></li>
+                                    <li><a href="#">Kardex</a></li>
+                                </ul>
+                            </div>
+                            <div data-dojo-type="dijit/layout/ContentPane" title="Estadísticas">
+                                <ul class="circle">
+                                    <li><a href="#">Atenciones por cliente y local</a></li>
+                                    <li><a href="#">Calificación del servicio por los clientes</a></li>
+                                    <li><a href="#">Control de facturación a clientes</a></li>
+                                    <li><a href="#">Estadísticas de ventas</a></li>
+                                    <li><a href="#">Evaluación de los clientes</a></li>
+                                    <li><a href="#">Indicadores de gestión</a></li>
+                                    <li><a href="#">Inspecciones</a></li>
+                                    <li><a href="#">Ordenes de trabajo</a></li>
+                                    <li><a href="#">Pago de servicios al personal</a></li>
+                                    <li><a href="#">Quejas y reclamos</a></li>
+                                    <li><a href="#">Técnicas aplicadas por la empresa</a></li>
+                                </ul>
+                            </div>
+                            <div data-dojo-type="dijit/layout/ContentPane" title="Finanzas">
+                                <ul class="circle">
+                                    <li><a href="#">Cuentas corrientes</a></li>
+                                    <li><a href="#">Egresos / Pagos</a></li>
+                                    <li><a href="#">Estados de ganancias y pérdidas</a></li>
+                                    <li><a href="#">Indicadores de gestión</a></li>
+                                    <li><a href="#">Movimientos bancarios</a></li>
+                                </ul>
+                            </div>
+                            <div data-dojo-type="dijit/layout/ContentPane" title="Utilitarios" selected="true">
+                                <ul class="circle">
+                                    <li><a href="#">Copia de respaldo del sistema</a></li>
+                                    <li><a href="#">Correlativos del sistema</a></li>
+                                    <li><a href="#">Distritos / Ubicaciones</a></li>
+                                    <li><a href="#">Formatos del sistema</a></li>
+                                    <li><a href="#">Impuestos</a></li>
+                                    <li><a href="#">Manuel de procedimientos</a></li>
+                                    <li><a href="#">Reparación de índices del sistema</a></li>
+                                    <li><a href="#">Tablas y valores del sistema</a></li>
+                                    <li><a href="#" onClick="changeScreenTo('<?php echo $this->url('user-index'); ?>'); return false;">Usuarios y accesos al sistema</a></li>
+                                    <li><a href="#">Validación de datos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-dojo-type="dijit/layout/ContentPane"
+                         data-dojo-props="region:'center'"
+                         data-dojo-id="mainContentId">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php echo $this->inlineScript()->prependFile($this->basePath('js/main.js')); ?>
     </body>
 </html>

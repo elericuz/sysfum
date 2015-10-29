@@ -33,19 +33,19 @@ class LoginController extends MainController
             $password = Encrypt::encrypt(trim($password), trim($email));
             $email = md5(trim($email));
 
-            $user_obj = $this->em->getRepository('Application\Entity\WebsiteTbSecurityUser')->findOneBySusvLogin($email);
+//             $user_obj = $this->em->getRepository('Application\Entity\WebsiteTbSecurityUser')->findOneBySusvLogin($email);
 
-            if(!$empty_obj->isValid($user_obj))
-                throw new \RuntimeException("El ussuario no es válido");
+//             if(!$empty_obj->isValid($user_obj))
+//                 throw new \RuntimeException("El ussuario no es válido");
 
-            if($user_obj->getSusvPassword()!==$password)
-                throw new \RuntimeException("La contraseña no es válida");
+//             if($user_obj->getSusvPassword()!==$password)
+//                 throw new \RuntimeException("La contraseña no es válida");
 
             $user = array(
-                'userId' => $user_obj->getSusi()->getSusiId(),
-                'userEntity' => $user_obj->getSeni()->getSeniId(),
-                'userName' => $user_obj->getSusi()->getSudvName(),
-                'userEmail' => $user_obj->getSusvLoginname()
+                'userId' => 1, //$user_obj->getSusi()->getSusiId(),
+                'userEntity' => 1, //$user_obj->getSeni()->getSeniId(),
+                'userName' => 'admin', //$user_obj->getSusi()->getSudvName(),
+                'userEmail' => 'admin@sysbusperu.com', //$user_obj->getSusvLoginname()
             );
 
             $this->getServiceLocator()->get('AuthService')->setStorage($this->getSessionStorage());

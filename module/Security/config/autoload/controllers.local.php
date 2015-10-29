@@ -4,7 +4,7 @@ return array(
         'invokables' => array(
             'Security\Controller\Client' => 'Security\Controller\ClientController',
             'Security\Controller\Login' => 'Security\Controller\LoginController',
+            'Security\Controller\User' => 'Security\Controller\UserController',
         ),
     )
 );
-?>

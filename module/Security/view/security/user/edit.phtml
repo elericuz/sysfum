@@ -1,0 +1,151 @@
+<div class="small-12 columns"><h1>Edición del Usuario</h1></div>
+<hr>
+<div class="small-12 columns">
+    <form>
+        <div data-dojo-type="dojox/layout/ContentPane" style="height: 500px;">
+            <div data-dojo-type="dijit/layout/TabContainer">
+                <div data-dojo-type="dojox/layout/ContentPane" title="Información del Usuario">
+                    <fieldset>
+                        <legend>Información Básica</legend>
+                        <div class="row">
+                            <div class="small-2 columns text-right">Nombre:</div>
+                            <div class="small-4 columns"><div data-dojo-type="dijit/form/TextBox" class=""></div></div>
+                            <div class="small-2 columns text-right">Apellido:</div>
+                            <div class="small-4 columns"><div data-dojo-type="dijit/form/TextBox"></div></div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Ingreso al Sistema</legend>
+                        <div class="row">
+                            <div class="small-2 columns text-right">Usuario:</div>
+                            <div class="small-10 columns"><div data-dojo-type="dijit/form/TextBox" class=""></div></div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="small-2 columns text-right">Contraseña:</div>
+                            <div class="small-4 columns"><div data-dojo-type="dijit/form/TextBox" type="password"></div></div>
+                            <div class="small-2 columns text-right">Confirmar:</div>
+                            <div class="small-4 columns"><div data-dojo-type="dijit/form/TextBox" type="password"></div></div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div data-dojo-type="dojox/layout/ContentPane" title="Accesos">
+                    <div class="small-12 columns">
+                        <div data-dojo-type="dijit/layout/AccordionContainer">
+                            <div data-dojo-type="dijit/layout/ContentPane" title="Entidades" selected="true">
+                                <table width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 60%;">Módulo</th>
+                                            <th style="width: 10%;">Crear</th>
+                                            <th style="width: 10%;">Leer</th>
+                                            <th style="width: 10%;">Actualizar</th>
+                                            <th style="width: 10%;">Borrar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>AFPs</td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Almacenes de Artículos</td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Areas de Ordenes de Trabajo</td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Artículos de Sistema</td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div data-dojo-type="dijit/layout/ContentPane" title="Operaciones">
+                                <table width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 60%;">Módulo</th>
+                                            <th style="width: 10%;">Crear</th>
+                                            <th style="width: 10%;">Leer</th>
+                                            <th style="width: 10%;">Actualizar</th>
+                                            <th style="width: 10%;">Borrar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Cadena de Reportes</td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Certificados Históricos</td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Certificados a Clientes</td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Checklist de quejas</td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                            <td><input type="checkbox"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-dojo-type="dojox/layout/ContentPane" title="Roles">
+                    <fieldset>
+                        <legend>Roles que tiene en el sistema</legend>
+                        <div class="row">
+                            <div class="small-5 columns">
+                                 <select multiple>
+                                    <option>Administrador del Sistema</option>
+                                    <option>Gerencia</option>
+                                    <option>Personal Técnico</option>
+                                 </select>
+                            </div>
+                            <div class="small-2 columns">
+                                <button class="button tiny">>></button><br>
+                                <button class="button tiny"><<</button>
+                            </div>
+                            <div class="small-5 columns">
+                                 <select multiple>
+                                    <option>Supervisores</option>
+                                 </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+        <input type="button" class="button small radius" value="Guardar los cambios">
+    </form>
+</div>
