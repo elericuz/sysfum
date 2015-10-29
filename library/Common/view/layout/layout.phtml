@@ -83,13 +83,15 @@
                                     <li><a href="#">Zona de Clientes</a></li>
                                 </ul>
                             </div>
-                            <div data-dojo-type="dijit/layout/ContentPane" title="Operaciones">
+                            <div data-dojo-type="dijit/layout/ContentPane" title="Operaciones" selected="true">
                                 <ul class="circle">
                                     <li><a href="#">Cadena de Reportes</a></li>
                                     <li><a href="#">Certificados Históricos</a></li>
                                     <li><a href="#">Certificados a Clientes</a></li>
                                     <li><a href="#">Checklist de quejas</a></li>
-                                    <li><a href="#">Clientes</a></li>
+                                    <li><a href="#"
+                                           onClick="changeScreenTo('<?php echo $this->url('cliente-index'); ?>');
+                                                    return false;">Clientes</a></li>
                                     <li><a href="#">Constancias</a></li>
                                     <li><a href="#">Coordinaciones</a></li>
                                     <li><a href="#">Cotizaciones</a></li>
@@ -163,7 +165,7 @@
                                     <li><a href="#">Movimientos bancarios</a></li>
                                 </ul>
                             </div>
-                            <div data-dojo-type="dijit/layout/ContentPane" title="Utilitarios" selected="true">
+                            <div data-dojo-type="dijit/layout/ContentPane" title="Utilitarios">
                                 <ul class="circle">
                                     <li><a href="#">Copia de respaldo del sistema</a></li>
                                     <li><a href="#">Correlativos del sistema</a></li>

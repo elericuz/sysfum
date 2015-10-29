@@ -12,7 +12,8 @@ return array(
         'DoctrineORMModule',
         'Common',
         'Security',
-        'Entity'
+        'Entity',
+        'Operation'
     ),
     'module_listener_options' => array(
         'module_paths' => array(
