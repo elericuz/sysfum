@@ -67,6 +67,116 @@ return array(
                     ),
                 ),
             ),
+            'cliente-locales-coordinacion' => array(
+                'type' => 'segment',
+                'options' => array(
+                    'route' => '/cliente/locales/coordinacion[/:id]',
+                    'defaults' => array(
+                        'controller' => 'Operation\Controller\Cliente',
+                        'action' => 'localescoordinacion',
+                        'id' => '\d+',
+                    ),
+                ),
+            ),
+            'cliente-servicios' => array(
+                'type' => 'segment',
+                'options' => array(
+                    'route' => '/cliente/servicios[/:id]',
+                    'defaults' => array(
+                        'controller' => 'Operation\Controller\Cliente',
+                        'action' => 'servicios',
+                        'id' => '\d+',
+                    ),
+                ),
+            ),
+            'cliente-programacion' => array(
+                'type' => 'segment',
+                'options' => array(
+                    'route' => '/cliente/programacion[/:id]',
+                    'defaults' => array(
+                        'controller' => 'Operation\Controller\Cliente',
+                        'action' => 'programacion',
+                        'id' => '\d+',
+                    ),
+                ),
+            ),
+            'cliente-personal' => array(
+                'type' => 'segment',
+                'options' => array(
+                    'route' => '/cliente/personal[/:id]',
+                    'defaults' => array(
+                        'controller' => 'Operation\Controller\Cliente',
+                        'action' => 'personal',
+                        'id' => '\d+',
+                    ),
+                ),
+            ),
+            'cliente-personal-editar' => array(
+                'type' => 'segment',
+                'options' => array(
+                    'route' => '/cliente/personal/editar[/:id]',
+                    'defaults' => array(
+                        'controller' => 'Operation\Controller\Cliente',
+                        'action' => 'personaleditar',
+                        'id' => '\d+',
+                    ),
+                ),
+            ),
+            'cliente-periodos' => array(
+                'type' => 'segment',
+                'options' => array(
+                    'route' => '/cliente/periodos[/:id]',
+                    'defaults' => array(
+                        'controller' => 'Operation\Controller\Cliente',
+                        'action' => 'periodos',
+                        'id' => '\d+',
+                    ),
+                ),
+            ),
+            'cliente-periodos-editar' => array(
+                'type' => 'segment',
+                'options' => array(
+                    'route' => '/cliente/periodos/editar[/:id]',
+                    'defaults' => array(
+                        'controller' => 'Operation\Controller\Cliente',
+                        'action' => 'periodoseditar',
+                        'id' => '\d+',
+                    ),
+                ),
+            ),
+            'cliente-pozo' => array(
+                'type' => 'segment',
+                'options' => array(
+                    'route' => '/cliente/pozo[/:id]',
+                    'defaults' => array(
+                        'controller' => 'Operation\Controller\Cliente',
+                        'action' => 'pozo',
+                        'id' => '\d+',
+                    ),
+                ),
+            ),
+            'cliente-planos' => array(
+                'type' => 'segment',
+                'options' => array(
+                    'route' => '/cliente/planos[/:id]',
+                    'defaults' => array(
+                        'controller' => 'Operation\Controller\Cliente',
+                        'action' => 'planos',
+                        'id' => '\d+',
+                    ),
+                ),
+            ),
+            'cliente-coordinaciones' => array(
+                'type' => 'segment',
+                'options' => array(
+                    'route' => '/cliente/coordinaciones[/:id]',
+                    'defaults' => array(
+                        'controller' => 'Operation\Controller\Cliente',
+                        'action' => 'coordinaciones',
+                        'id' => '\d+',
+                    ),
+                ),
+            ),
             'cliente-edit' => array(
                 'type' => 'segment',
                 'options' => array(

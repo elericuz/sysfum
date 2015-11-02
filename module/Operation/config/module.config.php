@@ -15,6 +15,15 @@ return array(
                 'localesnuevo' => 'layout/blank',
                 'localescoordinacion' => 'layout/blank',
                 'general' => 'layout/blank',
+                'servicios' => 'layout/blank',
+                'programacion' => 'layout/blank',
+                'personal' => 'layout/blank',
+                'personaleditar' => 'layout/blank',
+                'periodos' => 'layout/blank',
+                'periodoseditar' => 'layout/blank',
+                'pozo' => 'layout/blank',
+                'planos' => 'layout/blank',
+                'coordinaciones' => 'layout/blank',
             )
         )
     ),

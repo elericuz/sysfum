@@ -35,4 +35,49 @@ class ClienteController extends MainController
     {
         return new ViewModel();
     }
+
+    public function serviciosAction()
+    {
+        return new ViewModel();
+    }
+
+    public function programacionAction()
+    {
+        return new ViewModel();
+    }
+
+    public function personalAction()
+    {
+        return new ViewModel();
+    }
+
+    public function personaleditarAction()
+    {
+        return new ViewModel();
+    }
+
+    public function periodosAction()
+    {
+        return new ViewModel();
+    }
+
+    public function periodoseditarAction()
+    {
+        return new ViewModel();
+    }
+
+    public function pozoAction()
+    {
+        return new ViewModel();
+    }
+
+    public function planosAction()
+    {
+        return new ViewModel();
+    }
+
+    public function coordinacionesAction()
+    {
+        return new ViewModel();
+    }
 }
